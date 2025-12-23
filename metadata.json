@@ -1,0 +1,8 @@
+{
+  "name": "Shivam Tiwari Portfolio",
+  "description": "A minimalist, creative portfolio for Shivam Tiwari, a developer focused on AI/ML, Web3, and dApps.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
