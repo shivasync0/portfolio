@@ -1,21 +1,47 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shivam Tiwari | Creative Portfolio</title>
+  <title>Shivam Tiwari | Web Architect & AI/ML</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #18181b;
+      --grid-color: rgba(0, 0, 0, 0.05);
+    }
+    .dark {
+      --bg-color: #0a0a0a;
+      --text-color: #e5e5e5;
+      --grid-color: rgba(255, 255, 255, 0.03);
+    }
     body {
-      background-color: #0a0a0a;
-      color: #e5e5e5;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       font-family: 'JetBrains Mono', monospace;
       margin: 0;
       overflow-x: hidden;
+      background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
     ::selection {
       background-color: #3b82f6;
@@ -25,10 +51,20 @@
       width: 4px;
     }
     .custom-scrollbar::-webkit-scrollbar-track {
-      background: #0a0a0a;
+      background: transparent;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb {
       background: #333;
+      border-radius: 10px;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .light .glass {
+      background: rgba(0, 0, 0, 0.02);
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
   </style>
 <script type="importmap">
